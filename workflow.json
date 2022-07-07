@@ -1,11 +1,11 @@
 {
   "kind": "Workflow",
-  "id": "75b535b83295a57e2f4b81c7076c6f7c",
+  "id": "01cf8a8eb53fde1e9f3bc64e85542aee",
   "isDeleted": false,
-  "rev": "8-dea346f9c5c304fe08b0ac1270b11fb3",
+  "rev": "8-aa3f207f0af633485feb6dbc3ddf928f",
   "description": "Performs FlowSOM (cluster n=15) and views the results with a heatmap and minimum spanning tree (MST). FlowSOM clusters are also visualized in a heatmap using MEM score. 2D plot with Flt-SNE and UMAP. Downsampling filter applied(1%).For use with FlowJo plugin uploaded data.",
-  "name": "FlowJo Cluster Explorer - Quick View_v0.0.5",
-  "createdBy": "maho.nagasawa",
+  "name": "FlowJo Cluster Explorer - Quick View",
+  "createdBy": "ger.inberg",
   "acl": {
     "kind": "Acl",
     "owner": "TestTeam",
@@ -13,11 +13,11 @@
   },
   "createdDate": {
     "kind": "Date",
-    "value": "2022-06-28T10:25:51.036223Z"
+    "value": "2022-07-07T09:40:55.317163Z"
   },
   "lastModifiedDate": {
     "kind": "Date",
-    "value": "2022-06-28T12:13:40.129151Z"
+    "value": "2022-07-07T09:45:04.604571Z"
   },
   "urls": [
     {
@@ -33,16 +33,21 @@
       "kind": "Pair",
       "key": "copyOf",
       "value": "f8a10d0f634bec18e16e16305e002f60"
+    },
+    {
+      "kind": "Pair",
+      "key": "workflow.template",
+      "value": ""
     }
   ],
   "url": {
     "kind": "Url",
-    "uri": "https://github.com/tercen/FlowJo_advanced_cluster_explorer_template"
+    "uri": "https://github.com/tercen/FlowJo_cluster_explorer_quick_template"
   },
-  "version": "0.0.8",
+  "version": "0.0.6",
   "authors": [],
   "isPublic": false,
-  "projectId": "d39d7a670a36c13356a407fccdc11629",
+  "projectId": "01cf8a8eb53fde1e9f3bc64e8550f702",
   "folderId": "",
   "links": [
     {
@@ -123,7 +128,7 @@
       "kind": "TableStep",
       "id": "0396dda7-fae2-4ffd-865b-4cee6a25cb06",
       "groupId": "",
-      "name": "FlowJo Upload",
+      "name": "FlowJo Data",
       "inputs": [],
       "outputs": [
         {
@@ -137,13 +142,13 @@
         "kind": "Rectangle",
         "extent": {
           "kind": "Point",
-          "x": 107.34590148925781,
+          "x": 91.72190856933594,
           "y": 55.0
         },
         "topLeft": {
           "kind": "Point",
-          "x": 644.5050000000001,
-          "y": -47.5
+          "x": 650.5050000000001,
+          "y": -49.5
         }
       },
       "state": {
@@ -157,7 +162,7 @@
         "kind": "TableStepModel",
         "relation": {
           "kind": "UnionRelation",
-          "id": "3fa12f16-1545-4fa2-8e9a-d3edc64af6ea",
+          "id": "4ca20308-57e5-41f8-9ed4-38c267050a65",
           "relations": []
         }
       }
@@ -324,6 +329,27 @@
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
+                "name": "Value..filename",
+                "type": "string"
+              },
+              "rectangle": {
+                "kind": "Rectangle",
+                "extent": {
+                  "kind": "Point",
+                  "x": 150.0,
+                  "y": 30.0
+                },
+                "topLeft": {
+                  "kind": "Point",
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "kind": "GraphicalFactor",
+              "factor": {
+                "kind": "Factor",
                 "name": "Value..rowId",
                 "type": "int32"
               },
@@ -343,7 +369,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 4176
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -482,13 +508,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 1
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "7238f1a6-9aec-4bff-8e0a-db945ab7f647"
+        "id": "16d7d248-b036-42c9-a555-9497fbb870dc"
       }
     },
     {
@@ -554,7 +580,7 @@
                 "factors": [
                   {
                     "kind": "Factor",
-                    "name": "MEM.mem",
+                    "name": "MEM.score",
                     "type": "double"
                   }
                 ],
@@ -640,7 +666,7 @@
                   "kind": "GraphicalFactor",
                   "factor": {
                     "kind": "Factor",
-                    "name": "MEM.mem",
+                    "name": "MEM.score",
                     "type": "double"
                   },
                   "rectangle": {
@@ -711,7 +737,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 29
+          "nRows": 15
         },
         "filters": {
           "kind": "Filters",
@@ -789,7 +815,7 @@
         },
         "rowTable": {
           "kind": "CrosstabTable",
-          "cellSize": 52.0,
+          "cellSize": 293.0,
           "offset": 0,
           "graphicalFactors": [
             {
@@ -815,13 +841,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "55198668-8e02-458a-b1cd-840309c8c037"
+        "id": "86692199-640c-492e-83dd-37a5ee4019e2"
       }
     },
     {
@@ -887,7 +913,7 @@
                 "factors": [
                   {
                     "kind": "Factor",
-                    "name": "MEM.mem",
+                    "name": "MEM.score",
                     "type": "double"
                   }
                 ],
@@ -973,7 +999,7 @@
                   "kind": "GraphicalFactor",
                   "factor": {
                     "kind": "Factor",
-                    "name": "MEM.mem",
+                    "name": "MEM.score",
                     "type": "double"
                   },
                   "rectangle": {
@@ -1065,7 +1091,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 29
+          "nRows": 15
         },
         "filters": {
           "kind": "Filters",
@@ -1102,7 +1128,7 @@
         },
         "rowTable": {
           "kind": "CrosstabTable",
-          "cellSize": 51.693040000000046,
+          "cellSize": 271.69304000000005,
           "offset": 0,
           "graphicalFactors": [
             {
@@ -1149,13 +1175,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "a9c2b658-cbac-4bfa-a8a6-859917f13851"
+        "id": "9bb31c5f-9220-4af2-aa2a-fda531b93aed"
       }
     },
     {
@@ -1188,7 +1214,7 @@
         },
         "topLeft": {
           "kind": "Point",
-          "x": 912.5050000000001,
+          "x": 913.5050000000001,
           "y": 225.5
         }
       },
@@ -1320,6 +1346,27 @@
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
+                "name": "FlowSOM..filename",
+                "type": "string"
+              },
+              "rectangle": {
+                "kind": "Rectangle",
+                "extent": {
+                  "kind": "Point",
+                  "x": 170.0,
+                  "y": 30.0
+                },
+                "topLeft": {
+                  "kind": "Point",
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "kind": "GraphicalFactor",
+              "factor": {
+                "kind": "Factor",
                 "name": "FlowSOM..rowId",
                 "type": "int32"
               },
@@ -1339,7 +1386,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 4176
+          "nRows": 2455
         },
         "filters": {
           "kind": "Filters",
@@ -1351,9 +1398,9 @@
           "namespace": "Fl",
           "operatorRef": {
             "kind": "OperatorRef",
-            "name": "FIt-SNE",
-            "version": "0.1.3",
-            "operatorId": "d39d7a670a36c13356a407fccdc1642b",
+            "name": "FI-t-SNE",
+            "version": "0.1.4",
+            "operatorId": "a33e2c0f05753e1b035d27049ad46562",
             "operatorKind": "ROperator",
             "propertyValues": [
               {
@@ -1423,13 +1470,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "0cc225c4-9afd-4a1e-8d59-43d821503278"
+        "id": "ff8ccb00-cf4c-4a83-a466-92c7982040e3"
       }
     },
     {
@@ -1594,6 +1641,27 @@
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
+                "name": "FlowSOM..filename",
+                "type": "string"
+              },
+              "rectangle": {
+                "kind": "Rectangle",
+                "extent": {
+                  "kind": "Point",
+                  "x": 170.0,
+                  "y": 30.0
+                },
+                "topLeft": {
+                  "kind": "Point",
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "kind": "GraphicalFactor",
+              "factor": {
+                "kind": "Factor",
                 "name": "FlowSOM..rowId",
                 "type": "int32"
               },
@@ -1613,7 +1681,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 4176
+          "nRows": 2455
         },
         "filters": {
           "kind": "Filters",
@@ -1727,13 +1795,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "40a39222-4559-4093-b1c8-16cbb74551fc"
+        "id": "4f482219-51bb-4643-b272-46db7fc4e555"
       }
     },
     {
@@ -1813,12 +1881,12 @@
                     {
                       "kind": "DoubleColorElement",
                       "color": -1,
-                      "stringValue": "-55.5"
+                      "stringValue": "-40.5"
                     },
                     {
                       "kind": "DoubleColorElement",
                       "color": -1,
-                      "stringValue": "775.5"
+                      "stringValue": "796.5"
                     }
                   ]
                 }
@@ -1905,14 +1973,14 @@
         },
         "columnTable": {
           "kind": "CrosstabTable",
-          "cellSize": 216.53461653645832,
+          "cellSize": 250.0,
           "offset": 0,
           "graphicalFactors": [
             {
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
-                "name": "filename",
+                "name": "Fl..filename",
                 "type": "string"
               },
               "rectangle": {
@@ -1931,7 +1999,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 2
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -1994,13 +2062,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "363370fa-9f5a-4064-b52c-34439f58ed08"
+        "id": "f2c4877c-366b-41eb-80b9-70b1c35697bc"
       }
     },
     {
@@ -2164,14 +2232,14 @@
         },
         "columnTable": {
           "kind": "CrosstabTable",
-          "cellSize": 200.0,
+          "cellSize": 250.0,
           "offset": 0,
           "graphicalFactors": [
             {
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
-                "name": "filename",
+                "name": "res..filename",
                 "type": "string"
               },
               "rectangle": {
@@ -2190,7 +2258,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 2
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -2259,7 +2327,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "849b2710-798d-451b-9daa-30b05eefabc0"
+        "id": "f5158d18-f0f4-424f-84a2-286cc8168fea"
       }
     },
     {
@@ -2424,14 +2492,14 @@
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
-                "name": "filename",
+                "name": "FlowSOM..filename",
                 "type": "string"
               },
               "rectangle": {
                 "kind": "Rectangle",
                 "extent": {
                   "kind": "Point",
-                  "x": 80.0,
+                  "x": 170.0,
                   "y": 30.0
                 },
                 "topLeft": {
@@ -2464,7 +2532,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 29
+          "nRows": 15
         },
         "filters": {
           "kind": "Filters",
@@ -2476,14 +2544,14 @@
           "namespace": "MEM",
           "operatorRef": {
             "kind": "OperatorRef",
-            "name": "MEM Score",
-            "version": "1.2.1",
-            "operatorId": "d39d7a670a36c13356a407fccd6ea84c",
+            "name": "Marker Enrichment Score",
+            "version": "0.0.3",
+            "operatorId": "01cf8a8eb53fde1e9f3bc64e855109af",
             "operatorKind": "ROperator",
             "propertyValues": [],
             "url": {
               "kind": "Url",
-              "uri": "https://github.com/tercen/MEM_operator"
+              "uri": "https://github.com/tercen/marker_enrichment_operator"
             }
           },
           "environment": [
@@ -2542,13 +2610,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "4823bbc2-1225-4d41-ab87-0eebe47204aa"
+        "id": "71af5365-83ee-4f53-b259-8f7ecf9fb5a0"
       }
     },
     {
@@ -2581,8 +2649,8 @@
         },
         "topLeft": {
           "kind": "Point",
-          "x": 630.5968099975589,
-          "y": 32.5
+          "x": 629.5968099975589,
+          "y": 33.5
         }
       },
       "state": {
@@ -2706,9 +2774,30 @@
         },
         "columnTable": {
           "kind": "CrosstabTable",
-          "cellSize": 11.202380952380953,
+          "cellSize": 265.20238095238096,
           "offset": 0,
           "graphicalFactors": [
+            {
+              "kind": "GraphicalFactor",
+              "factor": {
+                "kind": "Factor",
+                "name": "filename",
+                "type": "string"
+              },
+              "rectangle": {
+                "kind": "Rectangle",
+                "extent": {
+                  "kind": "Point",
+                  "x": 80.0,
+                  "y": 32.0
+                },
+                "topLeft": {
+                  "kind": "Point",
+                  "x": 0.0,
+                  "y": 0.0
+                }
+              }
+            },
             {
               "kind": "GraphicalFactor",
               "factor": {
@@ -2721,7 +2810,7 @@
                 "extent": {
                   "kind": "Point",
                   "x": 0.0,
-                  "y": 70.0
+                  "y": 34.0
                 },
                 "topLeft": {
                   "kind": "Point",
@@ -2835,7 +2924,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "3b8db3b4-7279-4564-82f6-81e5173b5f66"
+        "id": "d73e3717-d8ec-4526-bb4a-a829be0fb2bb"
       }
     },
     {
@@ -2999,14 +3088,14 @@
         },
         "columnTable": {
           "kind": "CrosstabTable",
-          "cellSize": 218.2026666666667,
+          "cellSize": 250.0,
           "offset": 0,
           "graphicalFactors": [
             {
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
-                "name": "filename",
+                "name": "Fl..filename",
                 "type": "string"
               },
               "rectangle": {
@@ -3025,7 +3114,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 2
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -3094,7 +3183,7 @@
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "404c2bbc-899d-4fd2-a4e7-3c901634cd50"
+        "id": "72a77aea-f9f3-4948-8e49-5db49dce3a7b"
       }
     },
     {
@@ -3174,12 +3263,12 @@
                     {
                       "kind": "DoubleColorElement",
                       "color": -1,
-                      "stringValue": "-55.5"
+                      "stringValue": "-40.5"
                     },
                     {
                       "kind": "DoubleColorElement",
                       "color": -1,
-                      "stringValue": "775.5"
+                      "stringValue": "796.5"
                     }
                   ]
                 }
@@ -3266,14 +3355,14 @@
         },
         "columnTable": {
           "kind": "CrosstabTable",
-          "cellSize": 102.0,
+          "cellSize": 250.0,
           "offset": 0,
           "graphicalFactors": [
             {
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
-                "name": "filename",
+                "name": "res..filename",
                 "type": "string"
               },
               "rectangle": {
@@ -3292,7 +3381,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 2
+          "nRows": 1
         },
         "filters": {
           "kind": "Filters",
@@ -3355,13 +3444,13 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 8
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "8dafd191-ff9f-4a88-ad2b-3b49fdcafd82"
+        "id": "365a78e0-a367-4aba-bb08-19b763321c4b"
       }
     },
     {
@@ -3440,12 +3529,12 @@
                     {
                       "kind": "DoubleColorElement",
                       "color": -1,
-                      "stringValue": "71"
+                      "stringValue": "-40.5"
                     },
                     {
                       "kind": "DoubleColorElement",
                       "color": -1,
-                      "stringValue": "803"
+                      "stringValue": "796.5"
                     }
                   ]
                 }
@@ -3545,14 +3634,14 @@
               "kind": "GraphicalFactor",
               "factor": {
                 "kind": "Factor",
-                "name": "filename",
+                "name": "FlowSOM..filename",
                 "type": "string"
               },
               "rectangle": {
                 "kind": "Rectangle",
                 "extent": {
                   "kind": "Point",
-                  "x": 80.0,
+                  "x": 170.0,
                   "y": 30.0
                 },
                 "topLeft": {
@@ -3606,7 +3695,7 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 11734
+          "nRows": 2455
         },
         "filters": {
           "kind": "Filters",
@@ -3705,19 +3794,19 @@
             }
           ],
           "rectangleSelections": [],
-          "nRows": 39
+          "nRows": 9
         },
         "taskId": ""
       },
       "computedRelation": {
         "kind": "Relation",
-        "id": "616d97f6-08d2-48d5-ba2f-f8576f042c37"
+        "id": "9f155358-78a6-44cd-ad6a-c4bc196c6297"
       }
     }
   ],
   "offset": {
     "kind": "Point",
-    "x": 14.0,
-    "y": 190.0
+    "x": -16.0,
+    "y": 102.0
   }
 }
